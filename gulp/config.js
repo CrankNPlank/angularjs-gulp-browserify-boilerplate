@@ -5,13 +5,17 @@ module.exports = {
   'serverport': 3000,
 
   'styles': {
-    'src' : 'app/styles/**/*.scss',
-    'dest': 'build/css'
+    'src' : 'app/**/*.scss',
+    'dest': 'build'
   },
 
   'scripts': {
-    'src' : 'app/js/**/*.js',
-    'dest': 'build/js'
+    'src' : [
+      'app/**/*.js',
+      '!app/templates.js',
+      '!app/**/*.spec.js'
+    ],
+    'dest': 'build'
   },
 
   'images': {
@@ -21,11 +25,13 @@ module.exports = {
 
   'views': {
     'watch': [
-      'app/index.html',
-      'app/views/**/*.html'
+      'app/**/*.html'
     ],
-    'src': 'app/views/**/*.html',
-    'dest': 'app/js'
+    'src': [
+      'app/**/*.html',
+      '!app/index.html'
+    ],
+    'dest': 'app'
   },
 
   'dist': {
@@ -33,8 +39,8 @@ module.exports = {
   },
 
   'browserify': {
-    'entries'   : ['./app/js/main.js'],
-    'bundleName': 'main.js'
+    'entries'   : ['./app/app.js'],
+    'bundleName': 'app.js'
   },
 
   'test': {

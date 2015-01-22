@@ -5,9 +5,8 @@ var angular = require('angular');
 // angular modules
 require('angular-ui-router');
 require('./templates');
-require('./controllers/_index');
-require('./services/_index');
-require('./directives/_index');
+require('./components/_index');
+require('./home/_index');
 
 // create and bootstrap application
 angular.element(document).ready(function() {
@@ -15,19 +14,18 @@ angular.element(document).ready(function() {
   var requires = [
     'ui.router',
     'templates',
-    'app.controllers',
-    'app.services',
-    'app.directives'
+    'app.components',
+    'app.home'
   ];
 
   // mount on window for testing
   window.app = angular.module('app', requires);
 
-  angular.module('app').constant('AppSettings', require('./constants'));
+  angular.module('app').constant('AppSettings', require('./config/constants'));
 
-  angular.module('app').config(require('./routes'));
+  angular.module('app').config(require('./config/routes'));
 
-  angular.module('app').run(require('./on_run'));
+  angular.module('app').run(require('./config/on_run'));
 
   angular.bootstrap(document, ['app']);
 
