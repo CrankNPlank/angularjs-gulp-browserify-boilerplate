@@ -7,3 +7,6 @@ body {
   background-color: $background--light;
   padding: $half-space;
 }
+
+/* Add component-level SCSS imports here */
+@import 'home/home';
