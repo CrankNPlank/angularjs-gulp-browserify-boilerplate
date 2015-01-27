@@ -1,11 +1,11 @@
 'use strict';
 
-var controllersModule = require('./_index');
+var homeModule = require('./_index');
 
 /**
  * @ngInject
  */
-function ExampleCtrl() {
+function HomeController() {
 
   // ViewModel
   var vm = this;
@@ -15,4 +15,4 @@ function ExampleCtrl() {
 
 }
 
-controllersModule.controller('ExampleCtrl', ExampleCtrl);
+homeModule.controller('HomeController', HomeController);
