@@ -1,7 +1,5 @@
 'use strict';
 
-var homeModule = require('./_index');
-
 /**
  * @ngInject
  */
@@ -15,4 +13,4 @@ function HomeController() {
 
 }
 
-homeModule.controller('HomeController', HomeController);
+module.exports = HomeController;

@@ -2,8 +2,8 @@
 
 var angular = require('angular');
 
-module.exports = angular.module('app.components.example', []);
-
-// Define the list of component modules here
-require('./example.directive.js');
-require('./example.service.js');
+module.exports = angular.module('app.components.example', [])
+  .directive('exampleDirective',
+    require('./example.directive'))
+  .service('exampleService',
+    require('./example.service'));

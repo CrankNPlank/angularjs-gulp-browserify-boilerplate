@@ -1,7 +1,5 @@
 'use strict';
 
-var exampleModule = require('./_index.js');
-
 /**
  * @ngInject
  */
@@ -25,4 +23,4 @@ function exampleService($q, $http) {
 
 }
 
-exampleModule.service('exampleService', exampleService);
+module.exports = exampleService;
