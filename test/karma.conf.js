@@ -7,7 +7,7 @@ module.exports = function(config) {
     basePath: '../',
     frameworks: ['jasmine', 'browserify'],
     preprocessors: {
-      'app/js/**/*.js': ['browserify']
+      'app/**/*.js': ['browserify']
     },
     browsers: ['Chrome'],
     reporters: ['progress'],
@@ -32,7 +32,7 @@ module.exports = function(config) {
       'node_modules/angular-mocks/angular-mocks.js',
 
       // app-specific code
-      'app/js/main.js',
+      'app/app.js',
 
       // test files
       'test/unit/**/*.js'

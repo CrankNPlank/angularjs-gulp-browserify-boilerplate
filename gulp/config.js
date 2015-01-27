@@ -10,8 +10,8 @@ module.exports = {
   },
 
   'scripts': {
-    'src' : 'app/js/**/*.js',
-    'dest': 'build/js'
+    'src' : 'app/**/*.js',
+    'dest': 'build'
   },
 
   'images': {
@@ -25,7 +25,7 @@ module.exports = {
       'app/views/**/*.html'
     ],
     'src': 'app/views/**/*.html',
-    'dest': 'app/js'
+    'dest': 'app'
   },
 
   'dist': {
@@ -33,8 +33,8 @@ module.exports = {
   },
 
   'browserify': {
-    'entries'   : ['./app/js/main.js'],
-    'bundleName': 'main.js'
+    'entries'   : ['./app/app.js'],
+    'bundleName': 'app.js'
   },
 
   'test': {
