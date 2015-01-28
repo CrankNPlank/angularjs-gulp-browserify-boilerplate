@@ -8,7 +8,7 @@ var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('styles', function () {
+gulp.task('build:styles', function () {
 
   return gulp.src(config.styles.src)
     .pipe(sass({

@@ -3,12 +3,19 @@
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
-gulp.task('dev', ['clean'], function(cb) {
+gulp.task('dev', ['build:clean'], function(cb) {
 
   cb = cb || function() {};
 
   global.isProd = false;
 
-  runSequence('styles', 'images', 'views', 'browserify', 'watch', cb);
+  runSequence(
+    'build:styles',
+    'build:images',
+    'build:views',
+    'build:browserify',
+    'build:watch',
+    cb
+  );
 
 });

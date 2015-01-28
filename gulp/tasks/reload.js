@@ -3,7 +3,7 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 
-gulp.task('reload', function() {
+gulp.task('build:reload', function() {
 
   browserSync.reload();
 

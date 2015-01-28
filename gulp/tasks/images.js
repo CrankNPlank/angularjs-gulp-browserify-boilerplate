@@ -6,7 +6,7 @@ var gulp       = require('gulp');
 var gulpif     = require('gulp-if');
 var imagemin   = require('gulp-imagemin');
 
-gulp.task('images', function() {
+gulp.task('build:images', function() {
 
   var dest = config.images.dest;
 

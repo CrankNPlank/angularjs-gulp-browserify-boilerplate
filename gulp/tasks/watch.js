@@ -3,11 +3,11 @@
 var config        = require('../config');
 var gulp          = require('gulp');
 
-gulp.task('watch', ['browserSync', 'server'], function() {
+gulp.task('build:watch', ['build:browserSync', 'build:server'], function() {
 
-  gulp.watch(config.scripts.src, ['lint', 'browserify']);
-  gulp.watch(config.styles.src,  ['styles']);
-  gulp.watch(config.images.src,  ['images', 'reload']);
-  gulp.watch(config.views.watch, ['views']);
+  gulp.watch(config.scripts.src, ['build:lint', 'build:browserify']);
+  gulp.watch(config.styles.src,  ['build:styles']);
+  gulp.watch(config.images.src,  ['build:images', 'build:reload']);
+  gulp.watch(config.views.watch, ['build:views']);
 
 });

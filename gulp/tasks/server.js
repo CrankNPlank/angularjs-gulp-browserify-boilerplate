@@ -7,7 +7,7 @@ var gulp    = require('gulp');
 var gutil   = require('gulp-util');
 var morgan  = require('morgan');
 
-gulp.task('server', function() {
+gulp.task('build:server', function() {
 
   var server = express();
 

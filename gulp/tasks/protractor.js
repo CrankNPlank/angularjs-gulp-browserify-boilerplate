@@ -6,10 +6,10 @@ var webdriver       = require('gulp-protractor').webdriver;
 var webdriverUpdate = require('gulp-protractor').webdriver_update;
 var config          = require('../config');
 
-gulp.task('webdriver-update', webdriverUpdate);
-gulp.task('webdriver', webdriver);
+gulp.task('test:webdriver-update', webdriverUpdate);
+gulp.task('test:webdriver', webdriver);
 
-gulp.task('protractor', ['webdriver-update', 'webdriver', 'server'], function() {
+gulp.task('test:protractor', ['test:webdriver-update', 'test:webdriver', 'build:server'], function() {
 
   return gulp.src('test/e2e/**/*.js')
     .pipe(protractor({

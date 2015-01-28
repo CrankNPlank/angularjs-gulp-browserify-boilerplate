@@ -49,7 +49,7 @@ function buildScript(file) {
 
 }
 
-gulp.task('browserify', function() {
+gulp.task('build:browserify', function() {
 
   return buildScript(config.browserify.bundleName);
 
