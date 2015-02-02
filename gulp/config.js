@@ -5,8 +5,14 @@ module.exports = {
   'serverport': 3000,
 
   'styles': {
-    'src' : 'app/**/*.scss',
+    'srcApp' : ['app/**/*.scss', '!app/vendor.scss'],
+    'srcVend' : 'app/vendor.scss',
     'dest': 'build'
+  },
+
+  'fonts': {
+    'src' : 'node_modules/bootstrap-sass/assets/fonts/bootstrap/*',
+    'dest': 'build/fonts'
   },
 
   'scripts': {

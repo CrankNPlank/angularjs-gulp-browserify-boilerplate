@@ -8,12 +8,27 @@ var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('build:styles', function () {
+gulp.task('build:styles:app', function () {
 
-  return gulp.src(config.styles.src)
+  return gulp.src(config.styles.srcApp)
     .pipe(sass({
       sourceComments: global.isProd ? 'none' : 'map',
-      sourceMap: 'sass',
+      sourceMap: 'sassApp',
+      outputStyle: global.isProd ? 'compressed' : 'nested'
+    }))
+    .pipe(autoprefixer("last 2 versions", "> 1%", "ie 8"))
+    .on('error', handleErrors)
+    .pipe(gulp.dest(config.styles.dest))
+    .pipe(gulpif(browserSync.active, browserSync.reload({ stream: true })));
+
+});
+
+gulp.task('build:styles:vendor', function () {
+
+  return gulp.src(config.styles.srcVend)
+    .pipe(sass({
+      sourceComments: global.isProd ? 'none' : 'map',
+      sourceMap: 'sassVend',
       outputStyle: global.isProd ? 'compressed' : 'nested'
     }))
     .pipe(autoprefixer("last 2 versions", "> 1%", "ie 8"))

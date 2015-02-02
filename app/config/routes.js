@@ -3,7 +3,7 @@
 /**
  * @ngInject
  */
-function Routes($stateProvider, $locationProvider, $urlRouterProvider) {
+function Routes($locationProvider, $urlRouterProvider) {
 
   $locationProvider.html5Mode(true);
 

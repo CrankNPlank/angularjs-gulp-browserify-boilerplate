@@ -10,7 +10,9 @@ gulp.task('prod', ['build:clean'], function(cb) {
   global.isProd = true;
 
   runSequence(
-    'build:styles',
+    'build:styles:app',
+    'build:styles:vendor',
+    'build:fonts',
     'build:images',
     'build:views',
     'build:browserify',
