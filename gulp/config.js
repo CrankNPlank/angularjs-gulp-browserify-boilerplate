@@ -46,6 +46,10 @@ module.exports = {
   'test': {
     'karma': 'test/karma.conf.js',
     'protractor': 'test/protractor.conf.js'
+  },
+
+  'e2e': {
+    'src': 'test/e2e/**/*.js'
   }
 
 };

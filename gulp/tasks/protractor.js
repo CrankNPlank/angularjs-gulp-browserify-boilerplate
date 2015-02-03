@@ -11,7 +11,7 @@ gulp.task('test:webdriver', webdriver);
 
 gulp.task('test:protractor', ['test:webdriver-update', 'test:webdriver', 'build:server'], function() {
 
-  return gulp.src('test/e2e/**/*.js')
+  return gulp.src(config.e2e.src)
     .pipe(protractor({
         configFile: config.test.protractor,
     }))
