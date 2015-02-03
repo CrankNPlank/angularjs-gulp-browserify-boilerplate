@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default"
+  data-ng-controller="NavbarController as navbar">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+        data-ng-click="navbar.navCollapsed =
+          !navbar.navCollapsed">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <span class="fa fa-home"></span> BigCo, Inc.
+      </a>
+    </div><!-- /.navbar-header -->
+
+    <div class="collapse navbar-collapse"
+      collapse="navbar.navCollapsed">
+      <ul class="nav navbar-nav">
+
+        <li class="active"><a data-ng-href="#">Home</a></li>
+        <li><a data-ng-href="#">About</a></li>
+        <li><a data-ng-href="#">Contact</a></li>
+
+        <li class="dropdown" dropdown>
+          <a href="#" class="dropdown-toggle" dropdown-toggle
+            data-toggle="dropdown" role="button">
+            Days <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a data-ng-href="#">Day 1</a></li>
+            <li><a data-ng-href="#">Day 2</a></li>
+            <li><a data-ng-href="#">Day 3</a></li>
+          </ul>
+        </li><!-- /.dropdown -->
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+  </div><!-- /.container-fluid -->
+</nav>

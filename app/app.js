@@ -2,8 +2,11 @@
 
 var angular = require('angular');
 
-// angular modules
+// Angular modules
 require('angular-ui-router');
+require('angular-bootstrap');
+
+// App modules
 require('./templates');
 require('./home/_index');
 require('./components/_index');
@@ -13,6 +16,7 @@ angular.element(document).ready(function() {
 
   var requires = [
     'ui.router',
+    'ui.bootstrap',
     'templates',
     'app.home',
     'app.components'

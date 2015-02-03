@@ -6,7 +6,9 @@ body {
   color: $font-color--dark;
   background-color: $background--light;
   padding: $half-space;
+  margin-bottom: $footer-height;
 }
 
 /* Add component-level SCSS imports here */
 @import 'home/home';
+@import 'components/footer/footer';

@@ -1,6 +1,17 @@
 'use strict';
 
 /**
+ * State declarations
+ */
+var home = {
+  name: 'home',
+  url: '/',
+  controller: 'HomeController as home',
+  templateUrl: 'home/home.html',
+  title: 'Home'
+};
+
+/**
  * @ngInject
  */
 function homeConfig($stateProvider) {
@@ -11,14 +22,3 @@ function homeConfig($stateProvider) {
 }
 
 module.exports = homeConfig;
-
-/**
- * State declarations
- */
-var home = {
-  name: 'home',
-  url: '/',
-  controller: 'HomeController as home',
-  templateUrl: 'home/home.html',
-  title: 'Home'
-}
