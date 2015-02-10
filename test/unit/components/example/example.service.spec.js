@@ -1,22 +1,22 @@
-/*global angular */
+/* global angular */
 
 'use strict';
 
-describe('Unit: exampleService', function() {
+describe('Unit: exampleService', function () {
 
   var service;
 
-  beforeEach(function() {
+  beforeEach(function () {
     // instantiate the app module
     angular.mock.module('app');
 
     // mock the service
-    angular.mock.inject(function(exampleService) {
+    angular.mock.inject(function (exampleService) {
       service = exampleService;
     });
   });
 
-  it('should exist', function() {
+  it('should exist', function () {
     expect(service).toBeDefined();
   });
 
