@@ -7,19 +7,19 @@ module.exports = function(config) {
     basePath: '../',
     frameworks: ['jasmine', 'browserify'],
     preprocessors: {
-      'app/**/*.js': ['coverage', 'browserify']
+      'app/**/*.js': ['browserify']
     },
-    browsers: ['Chrome'],
-    reporters: ['progress', 'coverage'],
+    browsers: [/*'Chrome', */'PhantomJS'],
+    reporters: ['progress'],
 
     autoWatch: true,
 
     plugins: [
-      'karma-jasmine',
       'karma-bro',
-      'karma-coverage',
       'karma-chrome-launcher',
-      'karma-firefox-launcher'
+      'karma-firefox-launcher',
+      'karma-jasmine',
+      'karma-phantomjs-launcher'
     ],
 
     proxies: {
