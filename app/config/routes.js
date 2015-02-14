@@ -1,8 +1,6 @@
 'use strict';
 
-/**
- * @ngInject
- */
+/*  @ngInject */
 function Routes($locationProvider, $urlRouterProvider) {
 
   $locationProvider.html5Mode(true);

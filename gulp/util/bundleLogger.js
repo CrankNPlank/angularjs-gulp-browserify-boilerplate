@@ -11,12 +11,12 @@ var startTime;
 
 module.exports = {
 
-  start: function() {
+  start: function () {
     startTime = process.hrtime();
     gutil.log('Running', gutil.colors.green('\'bundle\'') + '...');
   },
 
-  end: function() {
+  end: function () {
     var taskTime = process.hrtime(startTime);
     var prettyTime = prettyHrtime(taskTime);
     gutil.log('Finished', gutil.colors.green('\'bundle\''), 'in', gutil.colors.magenta(prettyTime));

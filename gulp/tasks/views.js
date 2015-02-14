@@ -5,7 +5,7 @@ var gulp           = require('gulp');
 var templateCache  = require('gulp-angular-templatecache');
 
 // Views task
-gulp.task('build:views', function() {
+gulp.task('build:views', function () {
 
   // Put our index.html in the dist folder
   gulp.src('app/index.html')

@@ -2,7 +2,7 @@
 
 var notify = require('gulp-notify');
 
-module.exports = function(error) {
+module.exports = function (error) {
 
   if( !global.isProd ) {
 

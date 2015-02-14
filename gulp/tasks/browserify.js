@@ -25,7 +25,7 @@ function buildScript(file) {
 
   if ( !global.isProd ) {
     bundler = watchify(bundler);
-    bundler.on('update', function() {
+    bundler.on('update', function () {
       rebundle();
     });
   }
@@ -49,7 +49,7 @@ function buildScript(file) {
 
 }
 
-gulp.task('build:browserify', function() {
+gulp.task('build:browserify', function () {
 
   return buildScript(config.browserify.bundleName);
 

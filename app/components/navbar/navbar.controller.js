@@ -1,8 +1,6 @@
 'use strict';
 
-/**
- * @ngInject
- */
+/*  @ngInject */
 function NavbarController() {
 
   // ViewModel

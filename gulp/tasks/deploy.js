@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
 
   // Any deployment logic should go here
 

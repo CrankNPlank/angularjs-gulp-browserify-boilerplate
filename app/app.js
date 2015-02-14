@@ -12,7 +12,7 @@ require('./home/_index');
 require('./components/_index');
 
 // create and bootstrap application
-angular.element(document).ready(function() {
+angular.element(document).ready(function () {
 
   var requires = [
     'ui.router',

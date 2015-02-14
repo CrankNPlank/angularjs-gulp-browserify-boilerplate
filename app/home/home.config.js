@@ -11,9 +11,7 @@ var home = {
   title: 'Home'
 };
 
-/**
- * @ngInject
- */
+/*  @ngInject */
 function homeConfig($stateProvider) {
 
   $stateProvider

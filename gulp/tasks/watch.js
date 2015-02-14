@@ -3,7 +3,7 @@
 var config        = require('../config');
 var gulp          = require('gulp');
 
-gulp.task('build:watch', ['build:browserSync', 'build:server'], function() {
+gulp.task('build:watch', ['build:browserSync', 'build:server'], function () {
 
   gulp.watch(config.scripts.src,
     ['build:lint', 'build:browserify']);

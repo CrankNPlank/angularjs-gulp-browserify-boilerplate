@@ -9,13 +9,13 @@ var config          = require('../config');
 gulp.task('test:webdriver-update', webdriverUpdate);
 gulp.task('test:webdriver', webdriver);
 
-gulp.task('test:protractor', ['test:webdriver-update', 'test:webdriver', 'build:server'], function() {
+gulp.task('test:protractor', ['test:webdriver-update', 'test:webdriver', 'build:server'], function () {
 
   return gulp.src(config.e2e.src)
     .pipe(protractor({
         configFile: config.test.protractor,
     }))
-    .on('error', function(err) {
+    .on('error', function (err) {
       // Make sure failed tests cause gulp to exit non-zero
       throw err;
     });

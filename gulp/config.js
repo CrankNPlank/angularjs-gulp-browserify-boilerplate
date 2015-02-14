@@ -50,6 +50,10 @@ module.exports = {
 
   'e2e': {
     'src': 'test/e2e/**/*.js'
+  },
+
+  'document': {
+    'dest': 'docs'
   }
 
 };

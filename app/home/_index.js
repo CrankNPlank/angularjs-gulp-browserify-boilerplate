@@ -2,6 +2,12 @@
 
 var angular = require('angular');
 
+/**
+ * @ngdoc overview
+ * @name app.module:home
+ * @module app
+ * @description Bootstrapper for the home module
+ */
 module.exports = angular.module('app.home', [])
   .config(require('./home.config'))
   .controller('HomeController',
