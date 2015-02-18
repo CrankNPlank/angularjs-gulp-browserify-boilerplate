@@ -1,6 +1,13 @@
 'use strict';
 
-/*  @ngInject */
+/**
+ * @ngdoc controller
+ * @name app.components.footer.controller:FooterController
+ * @description Controller for the footer module. Sets-up everything the view
+ * needs to render the footer.
+ * 
+ * @ngInject
+ */
 function FooterController() {
 
   // ViewModel

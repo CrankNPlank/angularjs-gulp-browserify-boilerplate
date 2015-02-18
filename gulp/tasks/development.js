@@ -10,6 +10,7 @@ gulp.task('dev', ['build:clean'], function (cb) {
   global.isProd = false;
 
   runSequence(
+    'build:document',
     'build:styles:app',
     'build:styles:vendor',
     'build:fonts',

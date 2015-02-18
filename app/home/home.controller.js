@@ -3,8 +3,6 @@
 /**
  * @ngdoc controller
  * @name  app.home.controller:HomeController
- * @module app.home
- * @function
  * @description Controller for the home module. Sets-up everything the view
  * needs to render the homepage.
  * 

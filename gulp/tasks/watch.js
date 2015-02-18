@@ -6,7 +6,7 @@ var gulp          = require('gulp');
 gulp.task('build:watch', ['build:browserSync', 'build:server'], function () {
 
   gulp.watch(config.scripts.src,
-    ['build:lint', 'build:browserify']);
+    ['build:document', 'build:lint', 'build:browserify']);
   gulp.watch(config.styles.srcApp,
     ['build:styles:app', 'build:fonts']);
   gulp.watch(config.styles.srcVend,

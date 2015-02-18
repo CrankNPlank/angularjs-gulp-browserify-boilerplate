@@ -3,7 +3,7 @@
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
-gulp.task('prod', ['build:clean'], function (cb) {
+gulp.task('prod', ['build:clean', 'build:document'], function (cb) {
 
   cb = cb || function () {};
 
