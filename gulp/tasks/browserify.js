@@ -5,6 +5,8 @@ var gulp         = require('gulp');
 var gulpif       = require('gulp-if');
 var gutil        = require('gulp-util');
 var source       = require('vinyl-source-stream');
+var sourcemaps   = require('gulp-sourcemaps');
+var buffer       = require('vinyl-buffer');
 var streamify    = require('gulp-streamify');
 var watchify     = require('watchify');
 var browserify   = require('browserify');
@@ -18,6 +20,7 @@ function buildScript(file) {
 
   var bundler = browserify({
     entries: config.browserify.entries,
+    debug: true,
     cache: {},
     packageCache: {},
     fullPaths: true
@@ -35,12 +38,18 @@ function buildScript(file) {
 
   function rebundle() {
     var stream = bundler.bundle();
+    var createSourcemap = global.isProd && config.browserify.sourcemap;
 
     gutil.log('Rebundle...');
 
     return stream.on('error', handleErrors)
       .pipe(source(file))
-      .pipe(gulpif(global.isProd, streamify(uglify())))
+      .pipe(gulpif(createSourcemap, buffer()))
+      .pipe(gulpif(createSourcemap, sourcemaps.init()))
+      .pipe(gulpif(global.isProd, streamify(uglify({
+        compress: {drop_console: true}
+      }))))
+      .pipe(gulpif(createSourcemap, sourcemaps.write('./')))
       .pipe(gulp.dest(config.scripts.dest))
       .pipe(browserSync.reload({ stream: true, once: true }));
   }
