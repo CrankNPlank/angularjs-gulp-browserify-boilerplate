@@ -9,7 +9,7 @@ gulp.task('build:document', ['build:clean:docs'], function () {
   var options = {
     html5Mode: true,
     startPage: '/api',
-    title: 'Neeto Auto-Gen ngDocs',
+    title: 'Neeto Auto-Gen API ngDocs',
     titleLink: '/api'
   }
 
